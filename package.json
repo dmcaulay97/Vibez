@@ -1,0 +1,21 @@
+{
+  "name": "Vibez",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmcaulay97/Vibez.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmcaulay97/Vibez/issues"
+  },
+  "homepage": "https://github.com/dmcaulay97/Vibez#readme"
+}
