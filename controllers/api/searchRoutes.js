@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const fetch = require('node-fetch')
 require('dotenv').config();
+const YoutubeMusicApi = require("youtube-music-api");
+const musicApi = new YoutubeMusicApi();
 const withAuth = require('../../utils/auth');
 
 //Song search
@@ -18,7 +20,7 @@ router.get('/song/:search', async (req, res) => {
             track.artist = song.artist;
             response.push(track);
         });
-        res.status(200).json(response);
+        res.status(200).json({ response });
     } catch (err) {
         console.error(err);
         res.status(400).json(err);
@@ -94,6 +96,33 @@ router.get('/album/:search', async (req, res) => {
         console.error(err);
         res.status(400).json(err);
     }
-})
+});
+
+//Youtube id search
+router.get('/video/:search', async (req, res) => {
+    try {
+        musicApi.initalize()
+            .then(() => {
+                musicApi.search(req.params.search)
+                    .then((result) => {
+                        videos = result.content;
+                        const response = [];
+                        videos.forEach((vid) => {
+                            if (vid.videoId) {
+                                const video = {};
+                                video.title = vid.name;
+                                video.id = vid.videoId;
+                                response.push(video);
+                            }
+                        })
+                        console.log({ response });
+                        res.status(200).json({ response });
+                    });
+            });
+    } catch (err) {
+        console.error(err);
+        res.status(400).json(err);
+    }
+});
 
 module.exports = router;
