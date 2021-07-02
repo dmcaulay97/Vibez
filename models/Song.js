@@ -2,11 +2,11 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class Songs extends Model {
+class Song extends Model {
 
 };
 
-Songs.init(
+Song.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -15,6 +15,10 @@ Songs.init(
             autoIncrement: true,
         },
         name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        artist: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -38,4 +42,4 @@ Songs.init(
 );
 
 
-module.exports = Songs;
+module.exports = Song;
