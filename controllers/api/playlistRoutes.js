@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Playlist } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//The get route is for testing purposes.
 router.get('/', async (req, res) => {
     try {
         const playlistData = await Playlist.findAll();
@@ -28,7 +29,7 @@ router.post('/', async (req, res) => {
 
 });
 
-router.put('/:id'), async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         const updatedPlaylist = await Playlist.update(
             {
@@ -45,11 +46,10 @@ router.put('/:id'), async (req, res) => {
         console.error(err);
         res.status(400).json(err);
     }
-}
+});
 
 router.delete('/:id', async (req, res) => {
     try {
-        console.log(req.params.id, req.session);
         const playlistData = await Playlist.destroy({
             where: {
                 id: req.params.id,
