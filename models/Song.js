@@ -22,6 +22,10 @@ Song.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        video_id: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         playlist_id: {
             type: DataTypes.INTEGER,
             references: {

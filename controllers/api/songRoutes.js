@@ -9,7 +9,8 @@ router.get('/:id', async (req, res) => {
                 playlist_id: req.params.id
             }
         });
-        res.status(200).json(songData);
+        const songs = songData.map((song) => song.get({ plain: true }));
+        res.status(200).json(songs);
     } catch (err) {
         console.error(err);
         res.status(400).json(err);

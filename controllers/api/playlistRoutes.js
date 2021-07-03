@@ -31,6 +31,7 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     try {
+        console.log(req.session);
         const updatedPlaylist = await Playlist.update(
             {
                 name: req.body.name

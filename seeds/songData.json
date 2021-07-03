@@ -2,16 +2,19 @@
     {
         "name": "SENSE",
         "artist": "King Gizzard & The Lizard Wizard",
+        "video_id": "bNpEUbWOBiM",
         "playlist_id": 1
     },
     {
         "name": "All Caps",
         "artist": "Madvillain",
-        "playlist_id": 2
+        "video_id": "gSJeHDlhYls",
+        "playlist_id": 1
     },
     {
         "name": "Beastly",
         "artist": "Vulfpeck",
-        "playlist_id": 3
+        "video_id": "p4-7NiMLSPM",
+        "playlist_id": 1
     }
 ]
