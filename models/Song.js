@@ -2,11 +2,11 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class Songs extends Model {
+class Song extends Model {
 
 };
 
-Songs.init(
+Song.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -18,10 +18,18 @@ Songs.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        artist: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        video_id: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         playlist_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: "Playlist",
+                model: "playlist",
                 key: "id",
             }
         }
@@ -33,9 +41,9 @@ Songs.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Songs',
+        modelName: 'songs',
     }
 );
 
 
-module.exports = Songs;
+module.exports = Song;

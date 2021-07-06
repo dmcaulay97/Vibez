@@ -1,0 +1,14 @@
+[
+    {
+        "name": "playlist1",
+        "user_id": 1
+    },
+    {
+        "name": "playlist2",
+        "user_id": 1
+    },
+    {
+        "name": "playlist3",
+        "user_id": 1
+    }
+]

@@ -115,7 +115,6 @@ router.get('/video/:search', async (req, res) => {
                                 response.push(video);
                             }
                         })
-                        console.log({ response });
                         res.status(200).json({ response });
                     });
             });
