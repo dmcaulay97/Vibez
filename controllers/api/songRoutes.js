@@ -17,6 +17,19 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+router.post('/', async (req, res) => {
+    try {
+        const newSong = await Song.create({
+            ...req.body
+        });
+        console.log(newSong);
+        res.status(200).json(newSong);
+    } catch (err) {
+        console.error(err);
+        res.status(400).json(err);
+    }
+})
+
 router.delete('/:id', async (req, res) => {
     try {
         const songData = await Song.destroy({

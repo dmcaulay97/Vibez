@@ -16,5 +16,41 @@
         "artist": "Vulfpeck",
         "video_id": "p4-7NiMLSPM",
         "playlist_id": 1
+    },
+    {
+        "name": "Breathe (In The Air)",
+        "artist": "Pink Floyd",
+        "video_id": "mrojrDCI02k",
+        "playlist_id": 2
+    },
+    {
+        "name": "Good Times Bad Times",
+        "artist": "Led Zeppelin",
+        "video_id": "TA9Rec1qAFQ",
+        "playlist_id": 2
+    },
+    {
+        "name": "I Feel Free",
+        "artist": "Cream",
+        "video_id": "prnbF8Eagdg",
+        "playlist_id": 2
+    },
+    {
+        "name": "Paraiso - 2019 Remastering",
+        "artist": "Haruomi Hosono",
+        "video_id": "agB1vni2bHY",
+        "playlist_id": 3
+    },
+    {
+        "name": "Behind The Moon Shadow",
+        "artist": "Lamp",
+        "video_id": "hI9fjymKFlM",
+        "playlist_id": 3
+    },
+    {
+        "name": "Plastic Love",
+        "artist": "Mariya Takeuchi",
+        "video_id": "3bNITQR4Uso",
+        "playlist_id": 3
     }
 ]
