@@ -23,10 +23,10 @@ router.get('/signup', async (req, res) => {
         console.error(err);
         res.status(500).json(err);
     }
-})
+});
 
 //Homepage route
-router.get('/homePage', async (req, res) => {
+router.get('/homepage', withAuth, async (req, res) => {
 
     try {
         //The homepage will need to display list of users playlists
