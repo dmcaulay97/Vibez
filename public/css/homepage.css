@@ -1,0 +1,96 @@
+* body {
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-behavior: smooth;
+  }
+  .navbar-brand {
+    font-size: 50px;
+    position: sticky;
+    float: left;
+    padding-right: 300px;
+    color: white;
+  }
+  .list-group-item {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bolder;
+    font-size: 15px;
+    padding: 15px;
+    background: rgb(255, 255, 255, 0.1);
+    text-align: center;
+  }
+  .navbar {
+    font-family: fantasy;
+    font-size: small;
+  }
+  .videowrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0px;
+    justify-content: rightcn;
+  }
+
+
+
+  .videowrapper iframe {
+    /* position: absolute;
+    left: 500px;
+    top: -400px;
+    right: 150px;
+    bottom: 0px;
+    border-radius: 40px; */
+    display: block;
+    margin: auto;
+  }
+  .row {
+    padding: 40px;
+    box-sizing: border-box;
+    bottom: 0px;
+    border-radius: 50px;
+  }
+  .list-group-item {
+    border-radius: 5px;
+  }
+  ul {
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  ul li {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    background: rgb(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+  }
+  ul li:nth-child(1) {
+    background: rgb(255, 255, 255, 0.6);
+  }
+  ul li:nth-child(2) {
+    background: rgb(255, 255, 255, 0.4);
+  }
+  ul li:nth-child(3) {
+    background: rgb(255, 255, 255, 0.2);
+  }
+  ul li:nth-child(4) {
+    background: rgb(255, 255, 255, 0.6);
+  }
+  ul li:nth-child(5) {
+    background: rgb(255, 255, 255, 0.4);
+  }
+  ul li:nth-child(6) {
+    background: rgb(255, 255, 255, 0.2);
+  }
+  ul li:nth-child(7) {
+    background: rgb(255, 255, 255, 0.6);
+  }
+  ul li:nth-child(8) {
+    background: rgb(255, 255, 255, 0.4);
+  }
+  ul li:hover {
+    transform: scale(1.06);
+    background: #ff3790;
+  }
