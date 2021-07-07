@@ -28,27 +28,19 @@
 </nav>
 <div class="container-fluid">
     <div class="row">
-        <ul class="list-group col-4">
-            <li class="list-group-item">Results</li>
-            {{#each response as |song|}}
-            <li class="list-group-item d-flex justify-content-between">
-                <span class="song" data-name='{{song.name}}' data-artist='{{song.artist}}'>{{song.name}}-{{song.artist}}
-                </span>
-                <span class="addSelect">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Choose a Playlists</option>
-                        {{#each ../playlists as |pl|}}
-                        <option value='{{pl.id}}'>{{pl.name}}</option>
-                        {{/each}}
-                    </select>
-                    <button type="button" class="btn btn-primary addToPlaylist">Add</button>
-                </span>
-                <span class="add">&#10133;</span>
-            </li>
+        <ul class="list-group col-2">
+            <li class="list-group-item">Playlists</li>
+            {{#each playlists as |pl|}}
+            <li class="list-group-item playlist" id="{{pl.id}}">{{pl.name}}</li>
             {{/each}}
         </ul>
-        <iframe width="420" height="500" class="col-8" src="https://www.youtube.com/embed/tgbNymZ7vqY" id="youtube">
-        </iframe>
+        <div class="videowrapper col-8">
+            <iframe width="600" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY" id="youtube">
+            </iframe>
+        </div>
+        <ul class="list-group col-2" id="resultsList">
+            <li class="list-group-item">Results</li>
+        </ul>
     </div>
-    <script src="/js/results.js"></script>
 </div>
+<script src="/js/homepage.js"></script>
