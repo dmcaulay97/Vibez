@@ -1,5 +1,4 @@
 .addSelect{
-
     display: none
 }
 
@@ -8,7 +7,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     scroll-behavior: smooth;
-    overflow: hidden;
   }
   .navbar-brand {
     font-size: 50px;
@@ -72,3 +70,9 @@
     margin: 5px 0;
     transition: 0.5s;
   }
+
+  .button-box {
+    text-align:center;
+    margin-top:20px;
+ }
+

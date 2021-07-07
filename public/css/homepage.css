@@ -95,3 +95,9 @@
     transform: scale(1.06);
     background: #ff3790;
   }
+
+  #resultsList{
+    height: 400px; 
+    overflow: hidden;
+    overflow-y: scroll;
+   }
