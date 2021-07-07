@@ -36,7 +36,7 @@ router.get('/homePage', async (req, res) => {
             }
         });
         const playlists = playlistData.map((pl) => pl.get({ plain: true }));
-        res.render('TESTHOMEPAGE', { playlists });
+        res.render('homepage', { playlists, homepage: true });
     } catch (err) {
         console.error(err);
         res.status(500).json(err);
@@ -64,7 +64,7 @@ router.get('/results/:searchType/:search', async (req, res) => {
                 }
             });
             const playlists = playlistData.map((pl) => pl.get({ plain: true }));
-            res.render('results', { response, playlists });
+            res.render('results', { response, playlists, results: true });
         }
     } catch (err) {
         console.error(err);
