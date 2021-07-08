@@ -69,3 +69,27 @@ playlistArray.forEach((pl) => {
         });
     });
 });
+
+document.querySelector('.addPL').addEventListener('click', (e) => {
+    const newPL = document.createElement('li');
+    newPL.setAttribute('class', 'list-group-item d-flex justify-content-between');
+    newPL.innerHTML = '<input type="text" id="playlistName"><span class="createPL">&#10133;</span>';
+    const plList = document.querySelector('.plList');
+    plList.append(newPL);
+
+    document.querySelector('.createPL').addEventListener('click', async (e) => {
+        const name = e.target.previousElementSibling.value;
+        const response = await fetch('/api/playlists/', {
+            method: 'POST',
+            body: JSON.stringify({ name }),
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        if (response.ok) {
+            location.reload();
+        } else {
+            alert('Server error, playlist could not be created');
+        }
+    });
+});
