@@ -27,7 +27,6 @@ playlistArray.forEach((pl) => {
         }
         if (e.target.tagName == 'SPAN') {
             const list = e.target.parentNode;
-            console.log(list);
             list.setAttribute('class', 'selectedpl list-group-item playlist d-flex justify-content-between')
         } else {
             console.log(e.target);
