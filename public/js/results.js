@@ -2,7 +2,7 @@
 const songArray = document.querySelectorAll('.song');
 songArray.forEach((song) => {
     song.addEventListener('click', async (e) => {
-        if (e.target.getAttribute('class') != 'add' && e.target.getAttribute('class') != 'form-select' && e.target.getAttribute('class') != 'btn btn-primary addToPlaylist') {
+        if (e.target.getAttribute('class') == 'list-group-item d-flex justify-content-between song' || e.target.getAttribute('class') == 'name') {
             const unhighlight = document.querySelector('.selected');
             if (unhighlight) {
                 unhighlight.setAttribute('class', 'list-group-item d-flex justify-content-between song');
