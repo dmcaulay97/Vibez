@@ -64,7 +64,7 @@ ________________________________________________________________________________
 
 [Tchaiwanda C: Github](https://github.com/TMC-glitch)
 
-[Katherine Y : Github](https://github.com/katherineyoguez/vibez)
+[Katherine Y : Github](https://github.com/katherineyoguez)
 
 
 
