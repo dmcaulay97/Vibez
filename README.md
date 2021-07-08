@@ -4,7 +4,7 @@
 ## **Project Summary** ⚡️
 
 _Explore music with our website. Create a personal account that allows you to create as many playlists with as many songs
-you would like. Customize each playlist to your wants and vide to the music._
+you would like. Customize each playlist to your wants and vibe to the music._
 
 __________________________________________________________________________________________________________________________________________________
 
