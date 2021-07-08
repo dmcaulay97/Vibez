@@ -2,6 +2,23 @@
 const playlistArray = document.querySelectorAll('.playlist');
 playlistArray.forEach((pl) => {
     //The function in this event listener.
+    const plDelete = pl.childNodes[2];
+    plDelete.addEventListener('click', async (e) => {
+        const plId = e.target.parentNode.getAttribute('id');
+        const response = await fetch(`api/playlists/${plId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        console.log(response)
+        if (response.ok) {
+            e.target.parentNode.remove();
+        } else {
+            alert('Server error, song could not be deleted');
+        }
+    });
+
     pl.addEventListener('click', async (e) => {
         const id = e.target.getAttribute("id");
         const songData = await fetch(`/api/songs/${id}`,
@@ -17,6 +34,7 @@ playlistArray.forEach((pl) => {
         while (oldResults.length > 1) {
             resultsList.removeChild(resultsList.lastChild);
         }
+
         songs.forEach((e) => {
             const result = document.createElement("li");
             result.setAttribute('class', 'list-group-item d-flex justify-content-between');
@@ -30,6 +48,7 @@ playlistArray.forEach((pl) => {
                     youtube.setAttribute('src', `https://www.youtube.com/embed/${vidId}`);
                 }
             });
+
             const deleteSong = result.lastChild;
             deleteSong.addEventListener('click', async (e) => {
                 const songId = e.target.parentNode.getAttribute('id');
