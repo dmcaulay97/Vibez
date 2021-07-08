@@ -7,8 +7,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     scroll-behavior: smooth;
+    overflow: hidden;
   }
-  .navbar-brand {
+  .navbar-light .navbar-brand {
     font-size: 50px;
     position: sticky;
     float: left;
@@ -20,7 +21,7 @@
     font-weight: bolder;
     font-size: 15px;
     padding: 15px;
-    background: rgb(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.8);
     text-align: center;
   }
   .navbar {
@@ -69,6 +70,20 @@
     padding: 10px 20px;
     margin: 5px 0;
     transition: 0.5s;
+  }
+
+  ul li:nth-child(1n) {
+    background: rgb(255, 255, 255, 0.8);
+  }
+  ul li:nth-child(2n) {
+    background: rgb(255, 255, 255, 0.7);
+  }
+  ul li:nth-child(3n) {
+    background: rgb(255, 255, 255, 0.6);
+  }
+  ul li:hover {
+    transform: scale(1.06);
+    background: #ff3790;
   }
 
   .button-box {
