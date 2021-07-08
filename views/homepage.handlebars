@@ -1,7 +1,8 @@
 <div class="container-fluid">
     <div class="row">
-        <ul class="list-group col-2">
-            <li class="list-group-item">Playlists</li>
+        <ul class="list-group col-2 plList">
+            <li class="list-group-item d-flex justify-content-between"><span>Playlists</span><span
+                    class="addPL">&#10133;</span></li>
             {{#each playlists as |pl|}}
             <li class="list-group-item playlist d-flex justify-content-between" id="{{pl.id}}">
                 <span id="{{pl.id}}">{{pl.name}}</span><span class="deletePL">✖️</span>
@@ -15,7 +16,9 @@
         <ul class="list-group col-3" id="resultsList">
             <li class="list-group-item">Results</li>
         </ul>
+
     </div>
 </div>
+
 <script src="/js/homepage.js"></script>
 <script src="/js/navbar.js"></script>
