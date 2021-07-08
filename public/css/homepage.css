@@ -5,7 +5,7 @@
     scroll-behavior: smooth;
     overflow: hidden;
   }
-  .navbar-brand {
+  .navbar-light .navbar-brand {
     font-size: 50px;
     position: sticky;
     float: left;
@@ -68,13 +68,13 @@
     transition: 0.5s;
   }
   ul li:nth-child(1n) {
-    background: rgb(255, 255, 255, 0.6);
+    background: rgb(255, 255, 255, 0.8);
   }
   ul li:nth-child(2n) {
-    background: rgb(255, 255, 255, 0.4);
+    background: rgb(255, 255, 255, 0.7);
   }
   ul li:nth-child(3n) {
-    background: rgb(255, 255, 255, 0.2);
+    background: rgb(255, 255, 255, 0.6);
   }
   ul li:hover {
     transform: scale(1.06);
