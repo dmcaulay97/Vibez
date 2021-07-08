@@ -20,6 +20,19 @@ playlistArray.forEach((pl) => {
     });
 
     pl.addEventListener('click', async (e) => {
+        console.log(e.target.tagName);
+        const unhighlight = document.querySelector('.selectedpl');
+        if (unhighlight) {
+            unhighlight.setAttribute('class', 'list-group-item playlist d-flex justify-content-between');
+        }
+        if (e.target.tagName == 'SPAN') {
+            const list = e.target.parentNode;
+            list.setAttribute('class', 'selectedpl list-group-item playlist d-flex justify-content-between')
+        } else {
+            console.log(e.target);
+            e.target.setAttribute('class', 'selectedpl list-group-item playlist d-flex justify-content-between')
+        }
+        e.target.setAttribute('class', 'selectedpl list-group-item d-flex justify-content-between song')
         const id = e.target.getAttribute("id");
         const songData = await fetch(`/api/songs/${id}`,
             {
@@ -43,6 +56,17 @@ playlistArray.forEach((pl) => {
             result.innerHTML = `<span data-video-id='${e.video_id}'>${e.name} - ${e.artist}</span><span class='deleteSong'>✖️</span>`;
             result.addEventListener('click', (e) => {
                 if (e.target.getAttribute('class') != 'deleteSong') {
+                    const unhighlight = document.querySelector('.selectedSong');
+                    if (unhighlight) {
+                        unhighlight.setAttribute('class', 'list-group-item d-flex justify-content-between');
+                    }
+                    if (e.target.tagName == 'SPAN') {
+                        const list = e.target.parentNode;
+                        list.setAttribute('class', 'selectedSong list-group-item d-flex justify-content-between')
+                    } else {
+                        console.log(e.target);
+                        e.target.setAttribute('class', 'selectedSong list-group-item d-flex justify-content-between')
+                    }
                     const vidId = e.target.getAttribute('data-video-id');
                     const youtube = document.querySelector('#youtube');
                     youtube.setAttribute('src', `https://www.youtube.com/embed/${vidId}`);

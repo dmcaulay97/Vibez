@@ -86,6 +86,11 @@
     background: #ff3790;
   }
 
+  .title li:nth-child(1), div ul .selected{
+    transform: scale(1.06);
+    background: #ff3790;
+  }
+
   .button-box {
     text-align:center;
     margin-top:20px;

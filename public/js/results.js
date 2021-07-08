@@ -2,9 +2,19 @@
 const songArray = document.querySelectorAll('.song');
 songArray.forEach((song) => {
     song.addEventListener('click', async (e) => {
-        console.log(e.target.getAttribute('class'));
-        console.log(e.target.getAttribute('class') != 'add' && e.target.getAttribute('class') != 'form-select')
         if (e.target.getAttribute('class') != 'add' && e.target.getAttribute('class') != 'form-select' && e.target.getAttribute('class') != 'btn btn-primary addToPlaylist') {
+            const unhighlight = document.querySelector('.selected');
+            if (unhighlight) {
+                unhighlight.setAttribute('class', 'list-group-item d-flex justify-content-between song');
+            }
+            if (e.target.tagName == 'SPAN') {
+                const list = e.target.parentNode;
+                list.setAttribute('class', 'selected list-group-item d-flex justify-content-between song')
+            } else {
+                console.log(e.target);
+                e.target.setAttribute('class', 'selected list-group-item d-flex justify-content-between song')
+            }
+
             const info = e.target;
             const name = info.getAttribute('data-name');
             const artist = info.getAttribute('data-artist');
@@ -66,7 +76,6 @@ document.querySelector('.prev').addEventListener('click', (e) => {
     if (currentPage > 1) {
         const search = params[params.length - 2];
         const type = params[params.length - 3];
-        console.log(currentPage, search, type);
         document.location.replace(`/results/${type}/${search}/${currentPage - 1}`);
     }
 
@@ -78,7 +87,6 @@ document.querySelector('.next').addEventListener('click', (e) => {
     const currentPage = parseInt(params[params.length - 1]);
     const search = params[params.length - 2];
     const type = params[params.length - 3];
-    console.log(currentPage, search, type);
     document.location.replace(`/results/${type}/${search}/${currentPage + 1}`);
 
 })
