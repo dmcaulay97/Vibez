@@ -27,12 +27,12 @@ playlistArray.forEach((pl) => {
         }
         if (e.target.tagName == 'SPAN') {
             const list = e.target.parentNode;
+            console.log(list);
             list.setAttribute('class', 'selectedpl list-group-item playlist d-flex justify-content-between')
         } else {
             console.log(e.target);
             e.target.setAttribute('class', 'selectedpl list-group-item playlist d-flex justify-content-between')
         }
-        e.target.setAttribute('class', 'selectedpl list-group-item d-flex justify-content-between song')
         const id = e.target.getAttribute("id");
         const songData = await fetch(`/api/songs/${id}`,
             {
