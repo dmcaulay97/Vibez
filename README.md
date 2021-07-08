@@ -15,7 +15,7 @@ ________________________________________________________________________________
 ![Screenshot 1](img/signuppage.png)
 ![Screenshot 1](img/loginpage.png)
 ![Screenshot 1](img/playlist.png)
-![Screenshot 1](img/song.png)
+![Screenshot 1](img/songs.png)
 ![Screenshot 1](img/artist.png)
 ![Screenshot 1](img/album.png)
 
