@@ -1,36 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Vibez</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Song</option>
-                    <option value="artist">Artist</option>
-                    <option value="album">Album</option>
-                </select>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-dark" type="submit">Search</button>
-            </form>
-        </div>
-    </div>
-</nav>
 <div class="container-fluid">
     <div class="row">
-        <ul class="list-group col-4">
+        <ul class="list-group col-4 resultsList">
             <li class="list-group-item">Results</li>
-            {{#each response as |song|}}
+            {{#each pageNoRes as |song|}}
             <li class="list-group-item d-flex justify-content-between">
                 <span class="song" data-name='{{song.name}}' data-artist='{{song.artist}}'>{{song.name}}-{{song.artist}}
                 </span>
@@ -46,9 +18,14 @@
                 <span class="add">&#10133;</span>
             </li>
             {{/each}}
+            <div class="button-box col-lg-12">
+                <a href="mylink.php" class="btn btn-light prev" role="button">prev</a>
+                <a href="mylink.php" class="btn btn-light next" role="button">next</a>
+            </div>
         </ul>
         <iframe width="420" height="500" class="col-8" src="https://www.youtube.com/embed/tgbNymZ7vqY" id="youtube">
         </iframe>
     </div>
-    <script src="/js/results.js"></script>
 </div>
+<script src="/js/results.js"></script>
+<script src="/js/navbar.js"></script>
