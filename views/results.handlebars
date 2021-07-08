@@ -3,8 +3,9 @@
         <ul class="list-group col-4 resultsList">
             <li class="list-group-item">Results</li>
             {{#each pageNoRes as |song|}}
-            <li class="list-group-item d-flex justify-content-between">
-                <span class="song" data-name='{{song.name}}' data-artist='{{song.artist}}'>{{song.name}}-{{song.artist}}
+            <li class="list-group-item d-flex justify-content-between song" data-name='{{song.name}}'
+                data-artist='{{song.artist}}'>
+                <span data-name='{{song.name}}' data-artist='{{song.artist}}'>{{song.name}}-{{song.artist}}
                 </span>
                 <span class="addSelect">
                     <select class="form-select" aria-label="Default select example">

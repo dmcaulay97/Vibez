@@ -2,14 +2,18 @@
 const songArray = document.querySelectorAll('.song');
 songArray.forEach((song) => {
     song.addEventListener('click', async (e) => {
-        const info = e.target;
-        const name = info.getAttribute('data-name');
-        const artist = info.getAttribute('data-artist');
-        const videoSearch = await fetch(`/api/search/video/${name} ${artist}`);
-        const videoResults = await videoSearch.json();
-        const vidId = videoResults.response[0].id;
-        const youtube = document.querySelector('#youtube');
-        youtube.setAttribute('src', `https://www.youtube.com/embed/${vidId}`)
+        console.log(e.target.getAttribute('class'));
+        console.log(e.target.getAttribute('class') != 'add' && e.target.getAttribute('class') != 'form-select')
+        if (e.target.getAttribute('class') != 'add' && e.target.getAttribute('class') != 'form-select' && e.target.getAttribute('class') != 'btn btn-primary addToPlaylist') {
+            const info = e.target;
+            const name = info.getAttribute('data-name');
+            const artist = info.getAttribute('data-artist');
+            const videoSearch = await fetch(`/api/search/video/${name} ${artist}`);
+            const videoResults = await videoSearch.json();
+            const vidId = videoResults.response[0].id;
+            const youtube = document.querySelector('#youtube');
+            youtube.setAttribute('src', `https://www.youtube.com/embed/${vidId}`)
+        }
     });
 });
 
@@ -47,7 +51,6 @@ btnArray.forEach((btn) => {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response);
         if (response.ok) {
             alert('Song Added');
         } else {
